@@ -21,7 +21,7 @@ Using steps
 
 <div>
   <h1>Visualize Page</h1>
-  <h3> here you can visualize the price viriation on yearly ,monthly ,seasonly,rainfall,temperature,etc basis </h3>
+  <h3> here you can visualize the price viriation on yearly ,monthly ,seasonly, rainfall and temperaturebasis </h3>
   <img width="937" alt="image" src="https://github.com/user-attachments/assets/a28bcd46-05b3-489d-8447-c7fdb1b1313e" />
 
 </div>
