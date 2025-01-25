@@ -1,0 +1,218 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0e8418;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #f5b74f;
+}
+
+/* Hero Section */
+/* For Hero Section */
+.hero {
+    position: relative;
+    background-image: url('../static/images/bk1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Adjust opacity here */
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+
+/* Crop Section */
+/* Cards Section */
+.cards-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+    margin-top: 30px;
+  }
+  
+  /* Card Styling */
+  .card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Different background image for each card */
+  .card:nth-child(1) {
+    background-image: url('../static/images/soyabean.jpg'); /* Replace with actual image */
+  }
+  
+  .card:nth-child(2) {
+    background-image: url('../static/images/wheat.jpg'); /* Replace with actual image */
+  }
+  
+  .card:nth-child(3) {
+    background-image: url('../static/images/arhar.jpg'); /* Replace with actual image */
+  }
+  
+  /* Overlay Effect */
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+  
+  /* Major Crops Heading */
+.major-crops {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .major-crops h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333; /* Dark color for the heading */
+    margin: 0;
+    padding-top: 30px;
+  }
+
+  /* Card Content */
+  .card-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .card-content p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  /* Hover Effect: Scale and shadow */
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+
+/* Commodity Table */
+.commodity-table {
+    margin: 40px 20px;
+}
+
+.commodity-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.commodity-table table, th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.commodity-table th, td {
+    padding: 12px;
+}
+
+.commodity-table th {
+    background-color: #246dec;
+    color: white;
+}
+
+.commodity-table td {
+    background-color: #f9f9f9;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .crop-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .commodity-table table {
+        font-size: 14px;
+    }
+}

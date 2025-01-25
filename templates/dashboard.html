@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Prices Dashboard</title>
+  <link rel="stylesheet" href="../static/dahboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="predict">Prediction</a></li>
+            <li><a href="visualize">Visualization</a></li>
+        </ul>
+    </nav>
+    
+    <div class="charts">
+        <div class="charts-card">
+            <h2 class="chart-title">Yearly Price Variation</h2>
+            <div id="bar-chart"></div>
+        </div>
+    
+        <div class="charts-card">
+            <h2 class="chart-title">Monthly Price Trend</h2>
+            <div id="area-chart"></div>
+        </div>
+
+        <div class="charts-card">
+            <h2 class="chart-title">Yearly Price Variation</h2>
+            <div id="bar-chart2"></div>
+        </div>
+    </div>
+    
+  <script src="../static/dashboard.js"></script>
+</body>
+</html>

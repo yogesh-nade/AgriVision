@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="../static/home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/predict">Prediction</a></li>
+            <li><a href="/visualize">Visualization</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div> <!-- Overlay div -->
+        <div class="hero-content">
+            <h1>Welcome to the AgriVision</h1>
+            <p>Empowering Farmers, Transforming Agriculture - A Future Driven by Innovation.</p>
+        </div>
+    </section>
+    
+   
+    <!-- Major Crops Heading -->
+   <section class="major-crops">
+    <h2>Major Crops</h2>
+   </section>
+
+    <!-- Crop Section -->
+    <section class="cards-section">
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>Soyabean</h3>
+            <p> Date: 2025-01-25</p>
+            <p>Model Price: ₹3405</p>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>Wheat</h3>
+            <p> Date: 2025-01-25</p>
+            <p>Model Price: ₹3000</p>
+          </div>
+        </div>
+      
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-content">
+            <h3>Arhar(Tur)</h3>
+            <p>Date: 2025-01-25</p>
+            <p>Model Price: ₹2800</p>
+          </div>
+        </div>
+      </section>
+      
+
+    <!-- Commodity Table -->
+    <section class="commodity-table">
+        <h2>Commodity Prices</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Commodity</th>
+                    <th>Market</th>
+                    <th>Date</th>
+                    <th>Model Price</th>
+                    <th>Max Price</th>
+                    <th>Min Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Soyabean</td>
+                    <td>Latur</td>
+                    <td>24/01/2025</td>
+                    <td>₹{{ wheat_price }}</td>
+                    <td>₹{{ max_price }}</td>
+                    <td>₹{{ min_price }}</td>
+                </tr>
+                <tr>
+                    <td>Wheat</td>
+                    <td>Latur</td>
+                    <td>24/01/2025</td>
+                    <td>₹{{ rice_price }}</td>
+                    <td>₹{{ max_price }}</td>
+                    <td>₹{{ min_price }}</td>
+                </tr>
+                <tr>
+                    <td>Arhar(tur)</td>
+                    <td>Latur</td>
+                    <td>24/01/2024</td>
+                    <td>₹6250</td>
+                    <td>₹6500</td>
+                    <td>₹6000</td>
+                </tr>
+                <tr>
+                    <td>Wheat</td>
+                    <td>Latur(Murud)</td>
+                    <td>24/01/2025</td>
+                    <td>₹{{ rice_price }}</td>
+                    <td>₹{{ max_price }}</td>
+                    <td>₹{{ min_price }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <script src="{{ url_for('static', filename='home.js') }}"></script>
+</body>
+</html>

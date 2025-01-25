@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Price Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        form {
+            display: inline-block;
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        input {
+            padding: 8px;
+            margin: 5px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            color: blue;
+        }
+        .error {
+            color: red;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Crop Price Prediction</h2>
+    <form method="POST">
+        <label>Month (1-12):</label>
+        <input type="number" name="month" required min="1" max="12"><br>
+        
+        <label>Year:</label>
+        <input type="number" name="year" required min="2000"><br>
+        
+        <label>Day of Week (0=Monday, 6=Sunday):</label>
+        <input type="number" name="day_of_week" required min="0" max="6"><br>
+        
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction is not none %}
+        <div class="result">
+            <strong>Predicted Modal Price: ₹{{ prediction }}</strong>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error">
+            <strong>Error: {{ error }}</strong>
+        </div>
+    {% endif %}
+</body>
+</html>
